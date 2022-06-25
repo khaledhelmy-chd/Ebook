@@ -4,16 +4,27 @@ import 'package:book_store/futures/books/domain/entites/book.dart';
 
 class BookModel extends Book {
   const BookModel(
-      {required super.id,
-      required super.title,
-      required super.author,
-      required super.content,
-      required super.totalpages,
-      required super.img,
-      required super.audio,
-      required super.tags,
-      required super.catigories,
-      required super.file});
+      {required id,
+      required title,
+      required author,
+      required content,
+      required totalpages,
+      required img,
+      required audio,
+      required tags,
+      required catigories,
+      required file})
+      : super(
+            id: id,
+            title: title,
+            author: author,
+            content: content,
+            totalpages: totalpages,
+            img: img,
+            audio: audio,
+            tags: tags,
+            catigories: catigories,
+            file: file);
 
   factory BookModel.fromJson(Map<String, dynamic> jsonIteam) => BookModel(
         id: jsonIteam["id"] ?? 0,

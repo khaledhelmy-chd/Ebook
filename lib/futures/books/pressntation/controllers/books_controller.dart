@@ -1,5 +1,4 @@
 import 'package:book_store/core/controllers/core_controller.dart';
-import 'package:book_store/core/errors/exception/exception.dart';
 import 'package:book_store/core/errors/failure/failure.dart';
 import 'package:book_store/futures/books/data/datasource/RemoteDataSource/dio_remote_dataSource.dart';
 import 'package:book_store/futures/books/data/repsitories/remote_repository_books.dart';
