@@ -153,7 +153,7 @@ class ContainerApp {
                             color: shadowColor.withOpacity(0.4),
                             blurRadius: 1,
                             spreadRadius: 0),
-                        const BoxShadow(
+                        BoxShadow(
                             color: Colors.white,
                             blurRadius: 10,
                             spreadRadius: 5),

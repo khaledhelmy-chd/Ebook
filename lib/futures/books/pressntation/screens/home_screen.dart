@@ -16,8 +16,8 @@ import '../../../../core/themes/text_app.dart';
 import '../../domain/entites/book.dart';
 
 class HomeScreen extends CoreScreen<BooksController> {
-  final bookImageHeight = 280.0;
-  final bookImageWidth = 160.0;
+  final bookImageHeight = 320.0;
+  final bookImageWidth = 180.0;
   @override
   Widget build(BuildContext context) => _buildScreen();
 
@@ -36,6 +36,7 @@ class HomeScreen extends CoreScreen<BooksController> {
         flexibleSpace: _pageView(books),
         automaticallyImplyLeading: false,
         toolbarHeight: Get.height * 0.7,
+        floating: true,
       );
   _buildsubBody(List<Book> books) => SliverToBoxAdapter(
         child: Container(
@@ -44,6 +45,7 @@ class HomeScreen extends CoreScreen<BooksController> {
           width: Get.width,
           height: Get.height,
           child: SingleChildScrollView(
+            physics: NeverScrollableScrollPhysics(),
             child: Column(
               children: [
                 _headerHorizntalList("TOP", books),
@@ -132,7 +134,8 @@ class HomeScreen extends CoreScreen<BooksController> {
                       autoPlay: true,
                       autoPlayInterval: Duration(seconds: 6),
                       pauseAutoPlayInFiniteScroll: true,
-                    ))
+                    )),
+                _searchIteam(books)
               ],
             ),
           ),
