@@ -13,10 +13,11 @@ class TextApp {
       style: GoogleFonts.abrilFatface(
         textStyle: const TextStyle(
           color: titleTextColor,
-          fontSize: 16,
+          height: 2.0,
+          fontSize: 18,
           fontStyle: FontStyle.normal,
-          fontWeight: FontWeight.w500,
-          letterSpacing: 0.6,
+          fontWeight: FontWeight.w400,
+          letterSpacing: 2.0,
           shadows: [
             Shadow(color: shadowColor, blurRadius: 1),
           ],
@@ -41,11 +42,25 @@ class TextApp {
       textAlign: TextAlign.start,
       style: GoogleFonts.abrilFatface(
         textStyle: const TextStyle(
-          color: Colors.white,
+          color: Colors.black,
           fontSize: 14,
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.w500,
           letterSpacing: 0.4,
+        ),
+      ));
+  subTitleTextStyle3() => Text(src,
+      textAlign: TextAlign.start,
+      style: GoogleFonts.abrilFatface(
+        textStyle: const TextStyle(
+          color: primaryColor,
+          fontSize: 18,
+          fontWeight: FontWeight.w400,
+          letterSpacing: 2.0,
+          shadows: [
+            Shadow(color: shadowColor, blurRadius: 1),
+          ],
+          decorationThickness: 0.8,
         ),
       ));
   subTitleTextStyle2() => Text(src,
@@ -68,6 +83,18 @@ class TextApp {
           fontSize: 10,
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.w400,
+          letterSpacing: 0.2,
+          wordSpacing: 1.2,
+        ),
+      ));
+  descriptionTextStyle2() => Text(src,
+      textAlign: TextAlign.start,
+      style: GoogleFonts.roboto(
+        textStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 10,
+          fontStyle: FontStyle.normal,
+          fontWeight: FontWeight.w800,
           letterSpacing: 0.2,
           wordSpacing: 1.2,
         ),
